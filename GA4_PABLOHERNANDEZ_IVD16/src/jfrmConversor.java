@@ -19,6 +19,17 @@ public class jfrmConversor extends javax.swing.JFrame {
         
         kilometro = metro/1000;
         jtxtKilometros.setText(String.valueOf(kilometro));
+        
+        cm = metro*100;
+        jtxtCentimetros.setText(String.valueOf(cm));
+        
+        milla = metro/1609.34;
+        jtxtMillas.setText(String.valueOf(pies));
+        
+        pies = metro*3.281;
+        jtxtPies.setText(String.valueOf(pies));
+        
+        
     }
 
     /**
@@ -38,6 +49,9 @@ public class jfrmConversor extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jtxtKilometros = new javax.swing.JTextField();
         jButton2 = new javax.swing.JButton();
+        jtxtCentimetros = new javax.swing.JTextField();
+        jtxtMillas = new javax.swing.JTextField();
+        jtxtPies = new javax.swing.JTextField();
 
         jButton1.setText("jButton1");
 
@@ -48,11 +62,11 @@ public class jfrmConversor extends javax.swing.JFrame {
 
         jLabel2.setText("Kilometros");
 
-        jLabel3.setText("jLabel3");
+        jLabel3.setText("Centimetros");
 
-        jLabel4.setText("jLabel4");
+        jLabel4.setText("Millas");
 
-        jLabel5.setText("jLabel5");
+        jLabel5.setText("Pies");
 
         jtxtKilometros.setText(" ");
         jtxtKilometros.setEnabled(false);
@@ -63,6 +77,12 @@ public class jfrmConversor extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+
+        jtxtCentimetros.setEnabled(false);
+
+        jtxtMillas.setEnabled(false);
+
+        jtxtPies.setEnabled(false);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,13 +98,16 @@ public class jfrmConversor extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(59, 59, 59)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel2)
                                     .addComponent(jLabel3)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel2)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(jtxtKilometros, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5))))
+                                    .addComponent(jLabel5)
+                                    .addComponent(jLabel4))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jtxtKilometros, javax.swing.GroupLayout.DEFAULT_SIZE, 120, Short.MAX_VALUE)
+                                    .addComponent(jtxtMillas)
+                                    .addComponent(jtxtPies)
+                                    .addComponent(jtxtCentimetros, javax.swing.GroupLayout.Alignment.TRAILING))))
                         .addGap(0, 104, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
@@ -101,12 +124,18 @@ public class jfrmConversor extends javax.swing.JFrame {
                     .addComponent(jLabel2)
                     .addComponent(jtxtKilometros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel3)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jtxtCentimetros, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jtxtMillas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jtxtPies, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
                 .addComponent(jButton2)
                 .addContainerGap())
         );
@@ -164,6 +193,9 @@ public class jfrmConversor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JTextField jtxtCentimetros;
     private javax.swing.JTextField jtxtKilometros;
+    private javax.swing.JTextField jtxtMillas;
+    private javax.swing.JTextField jtxtPies;
     // End of variables declaration//GEN-END:variables
 }
